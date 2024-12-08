@@ -1,0 +1,20 @@
+name: Set Content-Type for AASA
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  set-content-type:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set Content-Type header
+        run: |
+          echo "Setting Content-Type for apple-app-site-association"
+          curl -X PUT -H "Content-Type: application/json" \
+          --data-binary @/.well-known/apple-app-site-association \
+          https://app.historyapp.one/.well-known/apple-app-site-association
