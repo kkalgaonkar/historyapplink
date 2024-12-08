@@ -1,0 +1,13 @@
+{
+  "applinks":{
+    "apps":[],
+    "details":[
+    {
+      "appID":"R4W6G583LC.org.reactjs.native.example.historyAppKetaki",
+      "paths":[
+        "*"
+        ]
+      }
+    ]
+  }
+}
