@@ -16,5 +16,11 @@ jobs:
         run: |
           echo "Setting Content-Type for apple-app-site-association"
           curl -X PUT -H "Content-Type: application/json" \
-          --data-binary @/.well-known/apple-app-site-association \
-          https://kkalgaonkar.github.io/.well-known/apple-app-site-association
+          --data-binary @/historyapplink/historyapplink/.well-known/apple-app-site-association \
+          https://kkalgaonkar.github.io/historyapplink/.well-known/apple-app-site-association
+      - name: Set Content-Type header 2
+        run: |
+          echo "Setting Content-Type for apple-app-site-association"
+          curl -X PUT -H "Content-Type: application/json" \
+          --data-binary @/historyapplink/.well-known/apple-app-site-association \
+          https://kkalgaonkar.github.io/historyapplink/.well-known/apple-app-site-association          
